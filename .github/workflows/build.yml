@@ -32,6 +32,6 @@ jobs:
         uses: ChristophWurst/xmllint-action@v1
         with:
           # The source (.xml) file
-          xml-file: src/main/mule/firstsonarproject.xml
+          xml-file: ${{ steps.project-name.outputs.projectName }}/src/main/mule/firstsonarproject.xml
           # The schema (.xsd) file
           xml-schema-file: .github/linters/mule-schema.xsd
