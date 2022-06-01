@@ -1,0 +1,66 @@
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://maven.apache.org/POM/4.0.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="project">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="modelVersion" type="xs:string" />
+        <xs:element name="groupId">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="3250a64b-b521-48da-8636-e0bfd4fb3162"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="artifactId">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="sumup-common(-\w+)+"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="version" type="xs:string" />
+        <xs:element name="packaging">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="mule-application"/>
+              <xs:enumeration value="mule-extension"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="name">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="sumup-common(-\w+)+"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="parent">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="groupId">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="3250a64b-b521-48da-8636-e0bfd4fb3162"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="artifactId">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="sumup-commons"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="version" type="xs:string" />
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="properties" minOccurs="0" maxOccurs="1" />
+        <xs:element name="build" minOccurs="0" maxOccurs="1" />
+        <xs:element name="dependencies" minOccurs="0" maxOccurs="1" />
+        <xs:element name="repositories" minOccurs="0" maxOccurs="1" />
+        <xs:element name="pluginRepositories" minOccurs="0" maxOccurs="1" />
+         <xs:element name="dependencyManagement" minOccurs="0" maxOccurs="1" />
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
