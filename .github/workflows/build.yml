@@ -34,4 +34,4 @@ jobs:
           # The source (.xml) file
           xml-file: src/main/mule/firstsonarproject.xml
           # The schema (.xsd) file
-          xml-schema-file: .github/workflows/schema/exchange-schema.xsd
+          xml-schema-file: .github/linters/mule-schema.xsd
