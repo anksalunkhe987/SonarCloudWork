@@ -32,6 +32,6 @@ jobs:
         uses: ChristophWurst/xmllint-action@v1
         with:
           # The source (.xml) file
-          xml-file: Sonarwork/src/main/mule/firstsonarproject.xml
+          xml-file: src/main/mule/firstsonarproject.xml
           # The schema (.xsd) file
-          xml-schema-file: ../linters/mule-schema.xsd
+          xml-schema-file: .github/workflows/schema/exchange-schema.xsd
