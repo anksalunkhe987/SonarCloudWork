@@ -19,7 +19,7 @@ output application/json
 	"name" : "Ankit",
 	"surname": "Salunkhe",
 	"country": "India",
-	"city" : "dhule"
+	"city" : "berlin"
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
