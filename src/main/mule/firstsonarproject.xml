@@ -17,7 +17,8 @@ output application/json
 ---
 {
 	"name" : "Ankit",
-	"surname": "Salunkhe"
+	"surname": "Salunkhe",
+	"city":"Dhule"
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
