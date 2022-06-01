@@ -34,4 +34,4 @@ jobs:
           # The source (.xml) file
           xml-file: SonarCloudWork/src/main/mule/firstsonarproject.xml
           # The schema (.xsd) file
-          xml-schema-file: .github/workflows/mule-schema.sch
+          xml-schema-file: .github/workflows/mule-schema.xsd
