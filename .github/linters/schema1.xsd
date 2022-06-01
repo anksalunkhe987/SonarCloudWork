@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
-<xs:schema xmlns:tns="http://www.mulesoft.org/schema/mule/mule-apikit" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.mulesoft.org/schema/mule/mule-apikit" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://www.mulesoft.org/schema/mule/http" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.mulesoft.org/schema/mule/http" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="schema2.xsd" namespace="http://www.mulesoft.org/schema/mule/documentation" />
-  <xs:element name="config">
+  <xs:element name="listener-config">
     <xs:complexType>
-      <xs:attribute name="outboundHeadersMapName" type="xs:string" use="optional" />
-      <xs:attribute name="httpStatusVarName" type="xs:string" use="optional" />
-      <xs:attribute xmlns:q1="http://www.mulesoft.org/schema/mule/documentation" ref="q1:name" use="optional" />
-      <xs:attribute xmlns:q2="http://www.mulesoft.org/schema/mule/documentation" ref="q2:id" use="optional" />
-      <xs:attribute name="name" type="xs:string" use="optional" />
-      <xs:attribute name="api" type="xs:string" use="optional" />
+      <xs:sequence>
+        <xs:element name="listener-connection">
+          <xs:complexType>
+            <xs:attribute name="host" type="xs:string" use="required" />
+            <xs:attribute name="port" type="xs:unsignedShort" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="required" />
+      <xs:attribute xmlns:q1="http://www.mulesoft.org/schema/mule/documentation" ref="q1:name" use="required" />
+      <xs:attribute xmlns:q2="http://www.mulesoft.org/schema/mule/documentation" ref="q2:id" use="required" />
     </xs:complexType>
   </xs:element>
-  <xs:element name="router">
+  <xs:element name="listener">
     <xs:complexType>
-      <xs:attribute xmlns:q3="http://www.mulesoft.org/schema/mule/documentation" ref="q3:name" use="optional" />
-      <xs:attribute xmlns:q4="http://www.mulesoft.org/schema/mule/documentation" ref="q4:id" use="optional" />
-      <xs:attribute name="config-ref" type="xs:string" use="optional" />
+      <xs:attribute xmlns:q3="http://www.mulesoft.org/schema/mule/documentation" ref="q3:name" use="required" />
+      <xs:attribute xmlns:q4="http://www.mulesoft.org/schema/mule/documentation" ref="q4:id" use="required" />
+      <xs:attribute name="config-ref" type="xs:string" use="required" />
+      <xs:attribute name="path" type="xs:string" use="required" />
     </xs:complexType>
   </xs:element>
 </xs:schema>
