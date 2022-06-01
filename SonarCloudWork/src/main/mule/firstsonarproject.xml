@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="364dafdf-9d79-4f0a-80ff-f16ecc485cf1" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="firstsonarprojectFlow" doc:id="f0e7ac3a-15ef-49c1-880e-0db4c232ce07" >
+		<http:listener doc:name="Listener" doc:id="0f74da9e-32ae-4115-bd7e-28d2a1f482c5" config-ref="HTTP_Listener_config" path="/testing"/>
+		<ee:transform doc:name="Transform Message" doc:id="db8b1e76-a71e-4bad-8b9c-60be7c6b64a6" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	"name" : "Ankit",
+	"surname": "Salunkhe",
+	"country": "Germany",
+	"city" : "berlin",
+	"phone" :"911434"
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</flow>
+</mule>
