@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema xmlns:tls="http://www.mulesoft.org/schema/mule/tls" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:apikit="http://www.mulesoft.org/schema/mule/mule-apikit" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.mulesoft.org/schema/mule/core" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="schema1.xsd" namespace="http://www.mulesoft.org/schema/mule/mule-apikit" />
+  <xs:import schemaLocation="schema3.xsd" namespace="http://www.mulesoft.org/schema/mule/http" />
+  <xs:element name="mule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="apikit:config" />
+        <xs:element minOccurs="0" name="flow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" ref="http:listener" />
+              <xs:element minOccurs="0" ref="apikit:router" />
+              <xs:element minOccurs="0" name="error-handler">
+                <xs:complexType>
+                  <xs:attribute name="ref" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="optional" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

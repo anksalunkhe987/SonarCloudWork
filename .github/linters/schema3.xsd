@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema xmlns:tns="http://www.mulesoft.org/schema/mule/http" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.mulesoft.org/schema/mule/http" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="listener">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="headers" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="statusCode" type="xs:string" use="optional" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="error-response">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="body" type="xs:string" />
+              <xs:element minOccurs="0" name="headers" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="statusCode" type="xs:string" use="optional" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="config-ref" type="xs:string" use="optional" />
+      <xs:attribute name="path" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

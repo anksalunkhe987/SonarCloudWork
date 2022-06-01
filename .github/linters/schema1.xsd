@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema xmlns:tns="http://www.mulesoft.org/schema/mule/mule-apikit" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.mulesoft.org/schema/mule/mule-apikit" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="schema2.xsd" namespace="http://www.mulesoft.org/schema/mule/documentation" />
+  <xs:element name="config">
+    <xs:complexType>
+      <xs:attribute name="outboundHeadersMapName" type="xs:string" use="optional" />
+      <xs:attribute name="httpStatusVarName" type="xs:string" use="optional" />
+      <xs:attribute xmlns:q1="http://www.mulesoft.org/schema/mule/documentation" ref="q1:name" use="optional" />
+      <xs:attribute xmlns:q2="http://www.mulesoft.org/schema/mule/documentation" ref="q2:id" use="optional" />
+      <xs:attribute name="name" type="xs:string" use="optional" />
+      <xs:attribute name="api" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="router">
+    <xs:complexType>
+      <xs:attribute xmlns:q3="http://www.mulesoft.org/schema/mule/documentation" ref="q3:name" use="optional" />
+      <xs:attribute xmlns:q4="http://www.mulesoft.org/schema/mule/documentation" ref="q4:id" use="optional" />
+      <xs:attribute name="config-ref" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
