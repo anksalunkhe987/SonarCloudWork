@@ -16,6 +16,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 output application/json
 ---
 {
+	"id" :"123",
 	"name" : "Ankit",
 	"surname": "Salunkhe",
 	"country": "Germany",
