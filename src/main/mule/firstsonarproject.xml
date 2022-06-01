@@ -19,7 +19,8 @@ output application/json
 	"name" : "Ankit",
 	"surname": "Salunkhe",
 	"country": "Germany",
-	"city" : "berlin"
+	"city" : "berlin",
+	"phone" :"911"
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
