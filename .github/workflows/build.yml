@@ -26,10 +26,12 @@ jobs:
           # Full git history
           fetch-depth: 0
       
-      - name: Code Review
-        run: |
-          echo running code review
-          apt-get update && \
-          apt-get -y --no-install-recommends install libxml2-utils && \
-          apt-get autoremove -y && \
-          apt-get clean
+      - name: Code review
+        # You may pin to the exact commit or the version.
+        # uses: ChristophWurst/xmllint-action@d18a551aab4728e4af449617638600634d7a48cb
+        uses: ChristophWurst/xmllint-action@v1
+        with:
+          # The source (.xml) file
+          xml-file: test.xml
+          # The schema (.xsd) file
+          xml-schema-file: .github/workflows/mule-schema.sch
