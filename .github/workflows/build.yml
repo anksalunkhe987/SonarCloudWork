@@ -32,6 +32,7 @@ jobs:
         uses: ChristophWurst/xmllint-action@v1
         with:
           # The source (.xml) file
-          xml-file: SonarCloudWork/src/main/mule/firstsonarproject.xml
+          xml-file: test.xml
           # The schema (.xsd) file
-          xml-schema-file: .github/workflows/mule-schema.xsd
+          xml-schema-file: .github/workflows/mule-schema.sch
+          xml-schema-type: schematron
