@@ -29,3 +29,4 @@ jobs:
       - name: Code Review
         run: |
           echo running code review
+          apt-get install libxml2
