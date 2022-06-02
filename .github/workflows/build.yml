@@ -29,4 +29,7 @@ jobs:
       - name: Code Review
         run: |
           echo running code review
-          apt-get install libxml2
+          apt-get update && \
+          apt-get -y --no-install-recommends install libxml2-utils && \
+          apt-get autoremove -y && \
+          apt-get clean
