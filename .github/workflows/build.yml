@@ -26,11 +26,6 @@ jobs:
           # Full git history
           fetch-depth: 0
       
-      - name: XML Lint
-        # You may pin to the exact commit or the version.
-        # uses: ChristophWurst/xmllint-action@d18a551aab4728e4af449617638600634d7a48cb
-        uses: ChristophWurst/xmllint-action@v1
-        with:
-          xml-file: test.xml
-          xml-schema-type: schematron
-          xml-schema-file: .github/workflows/mule-schema.sch
+      - name: Code Review
+        run: |
+          echo running code review
